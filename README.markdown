@@ -1,3 +1,6 @@
+![20230819_202759](https://github.com/ZXHACKERZX/ban_instzx/assets/132464664/56da0df4-679e-45f1-ac2f-45dc01fcf800)
+
+
 # ban_instzx
 PAINEL BAN INST USO CÓDIGOS EBT
 
