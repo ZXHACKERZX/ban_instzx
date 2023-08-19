@@ -1,4 +1,2 @@
 # ban_instzx
-
-#ifom 
-lk
+SM BAN INSTAGRAM FAST EASY 
