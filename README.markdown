@@ -12,9 +12,5 @@ pip install -r req.txt
 ./ban_instzx.sh
 bash ban_instzx.sh
 
-tab k
-
-esc
-
-Control + Shift +  k
-k
+# CANAL DO TELEGRAM
+[CANAL DO TELEGRAM AQUI](https://t.me/REPOSITORIOZX)
