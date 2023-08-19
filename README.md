@@ -1,2 +1,0 @@
-# ban_instzx
-PAINEL BAN INST USO CÓDIGOS EBT
