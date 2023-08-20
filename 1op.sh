@@ -28,7 +28,8 @@ while [ "$senha" != "vipzx" ]; do
     echo
     if [ "$senha" != "vipzx" ]; then
         clear
-        echo "Senha incorreta. Tente novamente."
+    echo "SENHA INCORRETA VOLTANDO MENU PRINCIPAL"
+    bash ban_instzx.sh        
     fi
 done
 
