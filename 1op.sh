@@ -3,12 +3,12 @@
 clear
 
 cat << "EOF"
-  ____          _   _   _____ _   _  _____ _______ 
+  ____          _   _   _____ _   _  _____ _______
  |  _ \   /\   | \ | | |_   _| \ | |/ ____|__   __|
- | |_) | /  \  |  \| |   | | |  \| | (___    | |   
- |  _ < / /\ \ | . ` |   | | | . ` |\___ \   | |   
- | |_) / ____ \| |\  |  _| |_| |\  |____) |  | |   
- |____/_/    \_\_| \_| |_____|_| \_|_____/   |_|   
+ | |_) | /  \  |  \| |   | | |  \| | (___    | |
+ |  _ < / /\ \ | . ` |   | | | . ` |\___ \   | |
+ | |_) / ____ \| |\  |  _| |_| |\  |____) |  | |
+ |____/_/    \_\_| \_| |_____|_| \_|_____/   |_|
                                                   
 EOF
 
@@ -22,25 +22,51 @@ read -p "IP: " perfil_ip
 echo
 
 senha=""
+attempts=0
+max_attempts=3
+
 while [ "$senha" != "vipzx" ]; do
+    if [ "$attempts" -ge "$max_attempts" ]; then
+        echo "Número máximo de tentativas excedido."
+        exit 1
+    fi
+
     echo -n "PASSWORD SCRIPT DONO: "
     read -s senha
     echo
+
     if [ "$senha" != "vipzx" ]; then
         clear
-    echo "SENHA INCORRETA VOLTANDO MENU PRINCIPAL"
-    bash ban_instzx.sh        
+        echo "SENHA INCORRETA"
+        echo "[ 1 ] VOLTA MENU PRINCIPAL"
+        echo "[ 2 ] TENTA DE NOVO A SENHA"
+        read -p "Escolha uma opção: " option
+
+        case $option in
+            1)
+                clear
+                bash ban_instzx.sh
+                ;;
+            2)
+                clear
+                attempts=$((attempts+1))
+                ;;
+            *)
+                echo "Opção inválida. Saindo."
+                exit 1
+                ;;
+        esac
     fi
 done
 
 clear
 cat << "EOF"
-   ____          _   _   _____ _   _  _____ _______ 
+   ____          _   _   _____ _   _  _____ _______
   / __ \   /\   | \ | | |_   _| \ | |/ ____|__   __|
- | |  | | /  \  |  \| |   | | |  \| | (___    | |   
- | |  | |/ /\ \ | . ` |   | | | . ` |\___ \   | |   
- | |__| / ____ \| |\  |  _| |_| |\  |____) |  | |   
-  \____/_/    \_\_| \_| |_____|_| \_|_____/   |_|   
+ | |  | | /  \  |  \| |   | | |  \| | (___    | |
+ | |  | |/ /\ \ | . ` |   | | | . ` |\___ \   | |
+ | |__| / ____ \| |\  |  _| |_| |\  |____) |  | |
+  \____/_/    \_\_| \_| |_____|_| \_|_____/   |_|
                                                   
 EOF
 read -p "Pressione Enter para continuar..."
