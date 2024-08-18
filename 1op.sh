@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash @ah_ruivinha_02
 
 clear
 
